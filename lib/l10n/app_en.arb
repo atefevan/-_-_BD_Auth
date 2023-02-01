@@ -1,0 +1,15 @@
+{
+    "appTitle":"Department of Food",
+    "nidTitle":"National Identity Card",
+    "nidTxtHint":"Enter Your National Identity Card Number",
+    "nidInvalidTxtHint":"NID Number is Required",
+    "cellTitle":"Mobile Number",
+    "cellTxtHint":"Enter Your Registered Mobile Number",
+    "cellInvalidTxtHint":"Mobile Number is Required",
+    "loginButtonTxt":"Next"
+    "congratsTitle":"Congratulation,You've successfully completed registration",
+    "congratsButtonTxt":"Let's Start",
+    "otpTitle":"A four digit verification code has been sent to the number provided on your dealer license card. Please enter the code in the box below.",
+    "sendOTPButtonTxt":"Verify",
+    "resendOTPButtonTxt":"Send Again"
+}
