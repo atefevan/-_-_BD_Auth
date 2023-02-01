@@ -19,6 +19,6 @@
     "imgVerifyTitle":"Information",
     "imgTrueButtonTxt":"Right",
     "imgFalseButtonTxt":"Wrong",
-    "imgVerifiedTitle":"Congratulations you have entered the correct identity",
+    "imgVerifiedTitle":"Congratulations!, you have entered the correct identity",
     "imgVerifiedButtonTxt":"Next Scan"
 }

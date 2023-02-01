@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_dept_bd/classes/language.dart';
 import 'package:food_dept_bd/classes/language_constants.dart';
-import 'package:food_dept_bd/config/config.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:food_dept_bd/config/config.dart';
 import 'package:food_dept_bd/main.dart';
 
 class LoginPage extends StatelessWidget {
@@ -15,10 +15,17 @@ class LoginPage extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.abc),
+        backgroundColor: Color(0xff5ab400),
+        leading: Padding(
+          padding: EdgeInsets.only(left: screenWidth / 50.0),
+          child: Image.asset(
+            'assets/logo/logo.png',
+            fit: BoxFit.cover,
+          ),
+        ),
         title: Text(
           translation(context).appTitle,
-          style: TextStyle(fontSize: 14.0),
+          style: TextStyle(fontSize: 24.0),
         ),
         actions: [
           Center(
@@ -63,16 +70,27 @@ class LoginPage extends StatelessWidget {
           slivers: [
             SliverToBoxAdapter(
               child: Center(
-                child: Icon(Icons.alarm_add_rounded),
+                child: Image.asset('assets/logo/logo.png'),
               ),
             ),
             SliverToBoxAdapter(
               child: Padding(
                 padding: EdgeInsets.only(
-                    left: screenWidth / 50.0, right: screenHeight / 50.0),
+                    left: screenWidth / 30.0, right: screenWidth / 30.0),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.amberAccent,
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 15.0, // soften the shadow
+                          spreadRadius: 5.0, //extend the shadow
+                          offset: Offset(
+                            5.0, // Move to right 5  horizontally
+                            5.0, // Move to bottom 5 Vertically
+                          ),
+                        )
+                      ],
                       borderRadius: BorderRadius.circular(15.0)),
                   height: screenHeight / 2.0,
                   width: double.infinity,
@@ -89,9 +107,14 @@ class LoginPage extends StatelessWidget {
                           children: [
                             Text(
                               AppLocalizations.of(context)!.nidTitle,
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontSize: screenWidth / 18.0,
+                                  fontWeight: FontWeight.bold),
                             ),
-                            Icon(Icons.person),
+                            Icon(
+                              Icons.person,
+                              size: screenWidth / 15.0,
+                            ),
                           ],
                         ),
                       ),
@@ -108,7 +131,9 @@ class LoginPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(12.0)),
                             filled: true,
                             hintText: AppLocalizations.of(context)!.nidTxtHint,
-                            hintStyle: TextStyle(fontWeight: FontWeight.bold),
+                            hintStyle: TextStyle(
+                                fontSize: screenWidth / 20.0,
+                                fontWeight: FontWeight.bold),
                             fillColor: Colors.black12,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12.0),
@@ -126,7 +151,9 @@ class LoginPage extends StatelessWidget {
                           children: [
                             Text(
                               AppLocalizations.of(context)!.cellTitle,
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontSize: screenWidth / 18.0,
+                                  fontWeight: FontWeight.bold),
                             ),
                             Icon(Icons.call),
                           ],
@@ -145,7 +172,8 @@ class LoginPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(12.0)),
                             filled: true,
                             hintText: AppLocalizations.of(context)!.cellTxtHint,
-                            hintStyle: TextStyle(fontWeight: FontWeight.bold),
+                            hintStyle: TextStyle(
+                                fontSize: 20.0, fontWeight: FontWeight.bold),
                             fillColor: Colors.black12,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12.0),
@@ -162,19 +190,21 @@ class LoginPage extends StatelessWidget {
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor:
-                                      Colors.greenAccent, // Background color
+                                      Color(0xff5ab400), // Background color
                                 ),
-                                onPressed: () {},
-                                child: Text(AppLocalizations.of(context)!
-                                    .loginButtonTxt)),
+                                onPressed: () {
+                                  Navigator.of(context)
+                                      .pushNamed(validInfoSuccessRoute);
+                                },
+                                child: Text(
+                                  AppLocalizations.of(context)!.loginButtonTxt,
+                                  style: TextStyle(fontSize: 20.0),
+                                )),
                           ))
                     ],
                   ),
                 ),
               ),
-            ),
-            SliverFillRemaining(
-              hasScrollBody: false,
             ),
           ],
         ),

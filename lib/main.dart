@@ -40,8 +40,6 @@ class _StarterState extends State<Starter> {
       supportedLocales: AppLocalizations.supportedLocales,
       onGenerateRoute: CustomRouter.generatedRoute,
       initialRoute: loginRoute,
-
-      // home: Verification(),
     );
   }
 }
