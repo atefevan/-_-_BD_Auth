@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../config/config.dart';
 // import '../screens/Error/error.dart';
-import '../screens/login_page.dart';
+import '../screens/login/login_page.dart';
 
 class CustomRouter {
   static Route<dynamic> generatedRoute(RouteSettings settings) {

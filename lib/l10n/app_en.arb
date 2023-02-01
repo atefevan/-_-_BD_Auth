@@ -6,10 +6,19 @@
     "cellTitle":"Mobile Number",
     "cellTxtHint":"Enter Your Registered Mobile Number",
     "cellInvalidTxtHint":"Mobile Number is Required",
-    "loginButtonTxt":"Next"
+    "loginButtonTxt":"Next",
     "congratsTitle":"Congratulation,You've successfully completed registration",
     "congratsButtonTxt":"Let's Start",
     "otpTitle":"A four digit verification code has been sent to the number provided on your dealer license card. Please enter the code in the box below.",
     "sendOTPButtonTxt":"Verify",
-    "resendOTPButtonTxt":"Send Again"
+    "resendOTPButtonTxt":"Send Again",
+    "scanTitle":"Press \"Scan\" button to identify rice receiver",
+    "scanButtonTxt":"scan",
+    "otpTitleVerify":"If the person cannot be identified by the assigned card, verify with the message sent to the mobile",
+    "otpButtonTxt":"Send OTP",
+    "imgVerifyTitle":"Information",
+    "imgTrueButtonTxt":"Right",
+    "imgFalseButtonTxt":"Wrong",
+    "imgVerifiedTitle":"Congratulations you have entered the correct identity",
+    "imgVerifiedButtonTxt":"Next Scan"
 }

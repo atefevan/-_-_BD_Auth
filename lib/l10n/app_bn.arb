@@ -11,5 +11,14 @@
     "congratsButtonTxt":"ব্যাবহার শুরু করি",
     "otpTitle":"আপনার ডিলার লাইসেন্স কার্ডের প্রদত্ত নম্বরে চার ডিজিটের ভেরিফিকেশন কোড পাঠানো হয়েছে। অনুগ্রহ করে নিচের ঘরে কোডটি লিখুন",
     "sendOTPButtonTxt":"নিশ্চিত",
-    "resendOTPButtonTxt":"পুনরায় পাঠান"
+    "resendOTPButtonTxt":"পুনরায় পাঠান",
+    "scanTitle":"চাল গ্রহীতা শনাক্ত করার জন্য \"স্ক্যান\" বাটন চাপুন",
+    "scanButtonTxt":"স্ক্যান করুন",
+    "otpTitleVerify":"নির্ধারিত কার্ড দ্বারা ব্যক্তিকে শনাক্ত করা সম্ভব না হলে মোবাইলে প্রেরণকৃত মেসেজ দিয়ে যাচাই করুন",
+    "otpButtonTxt":"OTP দিন",
+    "imgVerifyTitle":"তথ্য",
+    "imgTrueButtonTxt":"সঠিক",
+    "imgFalseButtonTxt":"সঠিক নয়",
+    "imgVerifiedTitle":"অভিনন্দন আপনি সঠিকভাবে পরিচয় প্রদান করেছেন",
+    "imgVerifiedButtonTxt":"পরবর্তী স্ক্যান করুন"
 }
