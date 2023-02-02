@@ -3,11 +3,14 @@ import 'package:food_dept_bd/classes/language.dart';
 import 'package:food_dept_bd/classes/language_constants.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:food_dept_bd/config/config.dart';
+import 'package:food_dept_bd/controller/login/login_controller.dart';
 import 'package:food_dept_bd/main.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
-  TextEditingController nidKey = TextEditingController();
+  TextEditingController nidController = TextEditingController();
+  TextEditingController mobileNoController = TextEditingController();
+  LogInController getAuthToken = LogInController();
 
   @override
   Widget build(BuildContext context) {
@@ -83,11 +86,11 @@ class LoginPage extends StatelessWidget {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey,
-                          blurRadius: 15.0, // soften the shadow
-                          spreadRadius: 5.0, //extend the shadow
+                          blurRadius: 15.0,
+                          spreadRadius: 5.0,
                           offset: Offset(
-                            5.0, // Move to right 5  horizontally
-                            5.0, // Move to bottom 5 Vertically
+                            5.0,
+                            5.0,
                           ),
                         )
                       ],
@@ -118,14 +121,13 @@ class LoginPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      // Note: Same code is applied for the TextFormField as well
                       Padding(
                         padding: EdgeInsets.only(
                             left: screenWidth / 20.0,
                             right: screenWidth / 20.0,
                             top: screenHeight / 80.0),
                         child: TextFormField(
-                          controller: nidKey,
+                          controller: nidController,
                           decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12.0)),
@@ -166,7 +168,7 @@ class LoginPage extends StatelessWidget {
                             right: screenWidth / 20.0,
                             top: screenHeight / 80.0),
                         child: TextFormField(
-                          controller: nidKey,
+                          controller: mobileNoController,
                           decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12.0)),
@@ -193,8 +195,16 @@ class LoginPage extends StatelessWidget {
                                       Color(0xff5ab400), // Background color
                                 ),
                                 onPressed: () {
-                                  Navigator.of(context)
-                                      .pushNamed(validInfoSuccessRoute);
+                                  getAuthToken.getToken().whenComplete(() {
+                                    getAuthToken
+                                        .getVerifyDealer(nidController.text,
+                                            mobileNoController.text)
+                                        .whenComplete(() =>
+                                            Navigator.of(context)
+                                                .pushNamed(verifyRoute));
+
+                                    /// chnage the name "verifyRoute" to where you want to go.
+                                  });
                                 },
                                 child: Text(
                                   AppLocalizations.of(context)!.loginButtonTxt,
