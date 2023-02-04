@@ -1,16 +1,10 @@
-# food_dept_bd
+# Food Dept BD
 
-A new Flutter project.
+An app that verify a valid user to collect the ration. Via this app user can easily verify them selfes to the govt. and get their needs. Just simple login and scan the QR Code, That's it.
 
-## Getting Started
+## What you need ?
 
-This project is a starting point for a Flutter application.
+- A simple Android Phone.
+- Active InternetConnection.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Showcase
